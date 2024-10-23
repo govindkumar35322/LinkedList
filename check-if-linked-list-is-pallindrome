@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+/* Structure of class Node is
+class Node
+{
+    int data;
+    Node next;
+
+    Node(int d)
+    {
+        data = d;
+        next = null;
+    }
+}*/
+
+class Solution {
+    // Function to check whether the list is palindrome.
+    boolean isPalindrome(Node head) {
+   ArrayList<Integer> arr=new ArrayList<Integer>();
+    ArrayList<Integer> arr1=new ArrayList<Integer>();
+   
+   while(head!=null){
+       arr.add(head.data);
+       arr1.add(head.data);
+       head=head.next;
+   }
+  Collections.reverse(arr1);
+   
+   if(arr.equals(arr1))
+   return true;
+   else
+   return false;
+   
+    }
+    
+}
