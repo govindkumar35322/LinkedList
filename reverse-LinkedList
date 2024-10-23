@@ -1,0 +1,35 @@
+class Node {
+    int data;
+    Node next;
+    Node(int value) {
+        this.value = value;
+    }
+}
+
+*/
+
+class Solution
+{
+    //Function to reverse a linked list.
+    Node reverseList(Node head)
+    {
+        Node temp;
+       Node pre=null;
+       temp=head;
+       Node newnode=null;
+       while(temp!=null){
+           newnode=temp.next;
+           temp.next=pre;
+           pre=temp;
+           temp=newnode;
+    }
+      head=pre;
+      
+     return head; 
+  }
+}
+
+
+
+
+
