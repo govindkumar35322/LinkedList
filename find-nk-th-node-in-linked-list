@@ -1,0 +1,38 @@
+
+
+/*
+class Node
+{
+    int data;
+    Node next;
+
+    Node(int key)
+    {
+        data = key;
+        next = null;
+    }
+}
+*/
+
+class Solution {
+    public static int fractional_node(Node head, int k) {
+        // Your code here
+        int count =0;
+        Node temp=head;
+        while(temp!=null){
+            count ++;
+            temp=temp.next;
+        }
+        int mid= (int) Math.ceil((double)count/(double)k);
+        int ct=1;
+        temp=head;
+        while(ct<mid){
+           
+                ct++;
+            temp=temp.next;
+            }
+           
+        
+        return temp.data;
+    }
+}
