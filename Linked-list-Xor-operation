@@ -1,0 +1,35 @@
+
+
+// class Node {
+//     int data;
+//     Node npx;
+
+//     Node(int x) {
+//         data = x;
+//         npx = null;
+//     }
+// }
+class Solution {
+    // function should insert the data to the front of the list
+    static Node insert(Node head, int data) {
+        // Code Here.
+        Node newnode=new Node(data);
+         newnode.npx=head;
+         return newnode;
+      //  return head;
+    }
+
+    // function to print the linked list
+    static ArrayList<Integer> getList(Node head) {
+        // Code Here.
+        ArrayList<Integer>arr=new ArrayList<Integer>();
+        Node temp=head;
+        
+        while(temp!=null){
+            arr.add(temp.data);
+            temp=temp.npx;
+        }
+        return arr;
+        
+    }
+}
