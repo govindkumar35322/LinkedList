@@ -1,0 +1,41 @@
+
+
+// User function Template for Java
+
+/*class Node
+
+class Node
+{
+   int data;
+   Node right,down;
+
+   Node(int data){
+       this.data = data;
+       right = null;
+       down = null;
+   }
+}
+*/
+/*Function should return the head of the 2D LL.*/
+class Solution {
+    static Node construct(int arr[][]) {
+        // Add your code here.
+        int n=arr.length;
+     Node head[][]=new Node[n][n];
+     
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+                head[i][j]= new Node(arr[i][j]);
+            }
+        }
+         for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+             if(j<n-1)
+            head[i][j].right=head[i][j+1];
+            if(i<n-1)
+            head[i][j].down=head[i+1][j];
+    }
+}
+return head[0][0];
+}
+}
